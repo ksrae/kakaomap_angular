@@ -1,0 +1,18 @@
+<div id="map" style="width:100%;height:350px;"></div>
+
+<button (click)="search()">검색</button>
+
+<p *ngIf="place">{{place | json}}</p>
+
+
+<p>List</p>
+<ul>
+  <li *ngFor="let item of placeList;index as i" (click)="selectPlace(item, i)">
+    <p>{{item.place_name}}</p>
+    <p>{{item.place_url}}</p>
+    <p>{{item.phone}}</p>
+    <p>{{item.address_name}}</p>
+    <p>{{item.y}}</p>
+    <p>{{item.x}}</p>
+  </li>
+</ul>
